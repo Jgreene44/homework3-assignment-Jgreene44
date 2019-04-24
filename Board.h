@@ -1,12 +1,12 @@
 //
-// Created by sgmason on 4/16/2019.
+// Created by jgreene44 on 4/16/2019.
 //
 #include <stdio.h>
 #define MAX_WIDTH  100
 #define TRUE  1
 #define FALSE 0
 #define UNDER_POPULATED  2
-#define OVER_POUPULATED  3
+#define OVER_POPULATED  3
 #define REPRODUCE  3
 #define LIVE_CELL  '0'
 #define NEW_CELL  'n'
