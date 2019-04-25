@@ -4,6 +4,11 @@
 #include <stdio.h>
 #include <time.h>
 #include "Board.h"
+/// main
+/// main method being ran for this program
+/// \param argc -> arguments
+/// \param argv[] -> arguemtns
+/// \return -> returns an int
 int main(int argc, const char * argv[]){
 
     Board **b;

@@ -7,6 +7,11 @@
 #define OS_WINDOWS
 #endif
 
+/// readBoard
+/// method to read in a new board
+/// \param b -> board being read in
+/// \param fp ->file to be read
+/// \return -> returns true or false based on if the board was created
 int readBoard(Board * b, FILE * fp)
 {
     if (fp == NULL) {
@@ -31,7 +36,11 @@ int readBoard(Board * b, FILE * fp)
     }
     return TRUE;
 }
-
+/// allocateBoard
+/// creates a board using the parameters
+/// \param b -> board being read
+/// \param fp ->file to be read
+/// \return -> returns nothing
 void allocateBoard(FILE * fp, Board ** b)
 {
     *b = malloc(sizeof(Board));
@@ -45,7 +54,10 @@ void allocateBoard(FILE * fp, Board ** b)
         (*b)->reproduced=0;
     }
 }
-
+/// printBoard
+/// method to print the board
+/// \param b -> board being read
+/// \return -> returns nothing
 void printBoard(Board * b)
 {
     for (int i = 0; i < b->width;i ++)
@@ -72,7 +84,12 @@ void printBoard(Board * b)
         printf("\n");
     }
 }
-
+/// countNeighbors
+/// method to count the boards neighbors or cells
+/// \param b -> board passed in
+/// \param row -> row of the board
+/// \param col -> column of the board
+/// \return -> returns the count
 int countNeighbors(Board b, int row, int col)
 {
     int count = 0;
@@ -95,7 +112,10 @@ int countNeighbors(Board b, int row, int col)
     }
     return count;
 }
-
+/// tickTime
+/// updates the board and data corresponding to the board
+/// \param b -> board passed in
+/// \return -> returns nothing
 void tickTime(Board * b)
 {
     int count;
@@ -122,7 +142,9 @@ void tickTime(Board * b)
         }
     }
 }
-
+/// clear
+/// clears the screen
+/// \return -> returns nothing
 void clear()
 {
 #ifdef OS_Windows
